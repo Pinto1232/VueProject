@@ -1,6 +1,6 @@
-# Quasar App (quasar-project)
+# FullView (fullview)
 
-A Quasar Project
+This is an advance admin dashboard app
 
 ## Install the dependencies
 ```bash
@@ -38,4 +38,4 @@ quasar build
 ```
 
 ### Customize the configuration
-See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-js).
+See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-webpack/quasar-config-js).
