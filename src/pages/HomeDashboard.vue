@@ -1,16 +1,11 @@
-
 <template>
-  <q-page>
-    <h2>Login</h2>
+  <q-page padding>
+    <h2>Dashboard</h2>
   </q-page>
 </template>
 
 <script>
 export default {
-
+  // name: 'PageName',
 }
 </script>
-
-<style>
-
-</style>

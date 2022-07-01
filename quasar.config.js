@@ -154,7 +154,7 @@ module.exports = configure(function (ctx) {
       manifest: {
         name: `FullView`,
         short_name: `FullView`,
-        description: `This is an advance admin dashboard app`,
+        description: `This is a dynamic crypto app`,
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',

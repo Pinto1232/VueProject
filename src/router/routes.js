@@ -1,25 +1,21 @@
 
-import generatedRoutes from './auto-routing/generated-routes'
-
 const routes = [
   {
-    path: '',
-    component: () => import('layouts/default.vue'),
+    path: '/',
+    component: () => import('layouts/LoginLayout.vue'),
     children: [
-      { path: '/login', componet: () => import('pages/LoginPage.vue')}
+      { path: '', component: () => import('pages/HomePage.vue') }
     ]
   },
 
   {
     path: '/dashboard',
-    component: () => import('layouts/MainLayout.vue'),
+    component: () => import('layouts/DashboardLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/IndexPage.vue') }
+      { path: '', component: () => import('pages/HomeDashboard.vue') }
     ]
   },
 
-  // Always leave this as last one,
-  // but you can also remove it
   {
     path: '/:catchAll(.*)*',
     component: () => import('pages/ErrorNotFound.vue')

@@ -1,6 +1,6 @@
 # FullView (fullview)
 
-This is an advance admin dashboard app
+This is a dynamic crypto app
 
 ## Install the dependencies
 ```bash
