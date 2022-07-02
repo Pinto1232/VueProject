@@ -1,42 +1,18 @@
 <template>
-  <q-layout  view="hHh lpR fFf">
-   <!--  <q-header
-      reveal
-      elevated
-      class="bg-primary text-white flex justify-around q-pt-md q-pb-md"
-      height-hint="308"
-    >
-      <q-tabs align="left">
-        <q-item-label class="text-h5 text-weight-bolder" to="" label="Logo">
-          <p>LOGO</p>
-        </q-item-label>
-      </q-tabs>
-
-      <q-tabs align="left">
-        <q-route-tab to="/dashboard" label="Login" />
-      </q-tabs>
-    </q-header> -->
-
+  <q-layout class="layout-box" view="hHh lpR fFf">
     <q-page-container>
       <router-view />
     </q-page-container>
-
-    <q-toolbar class="flex justify-center">
-     <!--  <FooterComponent /> -->
-    </q-toolbar>
   </q-layout>
 </template>
 
 <script>
 import { ref } from "vue";
-import FooterComponent from "src/components/FooterComponent.vue";
 
 export default {
   name: "LoginForm",
 
-  components: {
-    /* FooterComponent, */
-  },
+  components: {},
 
   setup() {
     const leftDrawerOpen = ref(false);
@@ -47,11 +23,15 @@ export default {
       },
     };
   },
-  components: { FooterComponent },
+  components: { /* FooterComponent */ },
 };
 </script>
 
 <style scoped>
+.layout-box {
+  height: 570px !important;
+  overflow: hidden !important;
+}
 
 .footer-row {
   height: 5rem;

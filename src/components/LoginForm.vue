@@ -1,6 +1,6 @@
 <template>
   <div class="q-pa-md bg-white form">
-    <q-form @submit="onSubmit" class="q-gutter-md form-q">
+    <q-form @submit="onSubmithandler" class="q-gutter-md form-q">
       <q-card v-if="submitResult.length > 0" flat bordered class="bg-grey-2">
         <q-card-section>Login Succeed):</q-card-section>
         <q-separator />
@@ -16,7 +16,7 @@
       </q-card>
 
       <div class="flex justify-center">
-        <img class="logo" :src="require('./../assets/logo.png')" alt="logo"/>
+        <img class="logo" :src="require('./../assets/logo.png')" alt="logo" />
       </div>
 
       <div class="input-value">
@@ -47,6 +47,13 @@
           color="primary"
         />
       </div>
+      <q-item-section>
+        <div class="flex justify-center">
+          <a to="/register">Forgot Username</a>
+          <div>|</div>
+          <a to="/register">Forgot Password</a>
+        </div>
+      </q-item-section>
     </q-form>
   </div>
 </template>
@@ -54,7 +61,11 @@
 <script>
 import { ref } from "vue";
 
-
+const link = [
+  {
+    label: "",
+  },
+];
 export default {
   name: "LoginForm",
   setup() {
@@ -65,11 +76,12 @@ export default {
       passowrd: ref("Passowrd"),
       submitResult,
 
-      onSubmit(evt) {
+      onSubmithandler(evt) {
         const formData = new FormData(evt.target);
         const data = [];
+        console.log(data);
 
-        for (const [name, value] of formData.entries()) {
+        for (const [name, value, passowrd] of formData.entries()) {
           data.push({
             name,
             passowrd,
@@ -89,7 +101,7 @@ export default {
   max-width: 100%;
 }
 
-.logo{
+.logo {
   max-width: 20%;
 }
 
@@ -98,20 +110,15 @@ export default {
 }
 .form {
   width: 25%;
-  height: 37em;  margin-top: 6em;
+  height: 37em;
+  margin-top: 6em;
   margin-bottom: 2em;
-  box-shadow: 0 19px 38px
-  rgba(0, 0, 0, 0.3),
-  0 15px 12px
-  rgba(0, 0, 0, 0.22);
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
   border-radius: 1%;
 }
-
-
-.input-value{
+.input-value {
   margin-top: 6em;
 }
-
 .input-value .txt {
   margin-bottom: 1em;
 }

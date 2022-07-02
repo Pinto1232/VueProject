@@ -1,5 +1,5 @@
 <template>
-  <q-page class="flex justify-around home-bg no-scrollbar">
+  <q-page class="flex justify-around home-bg">
     <LoginFormVue />
   </q-page>
 </template>
@@ -24,4 +24,6 @@ export default defineComponent({
   background-size: cover;
   height: 100vh;
 }
+
+
 </style>
