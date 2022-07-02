@@ -48,10 +48,10 @@
         />
       </div>
       <q-item-section>
-        <div class="flex justify-center">
-          <a to="/register">Forgot Username</a>
+        <div class="flex justify-center text-primary cursor-pointer ">
+          <a class="q-mr-sm" to="/register">Forgot Username</a>
           <div>|</div>
-          <a to="/register">Forgot Password</a>
+          <a class="q-ml-sm" to="/register">Forgot Password</a>
         </div>
       </q-item-section>
     </q-form>
