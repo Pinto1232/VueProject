@@ -148,6 +148,7 @@
             v-ripple
             v-for="link in links1"
             :key="link.text"
+            :to="link.to"
             clickable
           >
             <q-item-section avatar>
@@ -272,8 +273,8 @@ export default {
       byWebsite,
       byDate,
       links1: [
-        { icon: "home", text: "Home", to: "/home" },
-        { icon: "currency_bitcoin", text: "BTC" },
+        { icon: "home", text: "Home", to: "/dashboard" },
+        { icon: "currency_bitcoin", text: "BTC", to: "/dashboard/bitcoin" },
         { icon: "person", text: "ETH" },
         { icon: "star_border", text: "USDT" },
         { icon: "search", text: "BNB" },

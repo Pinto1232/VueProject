@@ -1,4 +1,3 @@
-
 const routes = [
   {
     path: '/',
@@ -12,7 +11,8 @@ const routes = [
     path: '/dashboard',
     component: () => import('layouts/DashboardLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/HomeDashboard.vue') }
+      { path: '/dashboard', component: () => import('pages/HomeDashboard.vue') },
+      { path: '/dashboard/bitcoin', component: () => import('pages/BitcoinPage.vue') },
     ]
   },
 
