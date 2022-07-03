@@ -272,6 +272,7 @@ export default {
       byWebsite,
       byDate,
       links1: [
+        { icon: "home", text: "Home", to: "/home" },
         { icon: "currency_bitcoin", text: "BTC" },
         { icon: "person", text: "ETH" },
         { icon: "star_border", text: "USDT" },

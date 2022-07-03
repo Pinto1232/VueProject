@@ -16,7 +16,8 @@
       </q-card>
 
       <div class="flex justify-center">
-        <img class="logo" :src="require('./../assets/logo.png')" alt="logo" />
+        <!--  <img class="logo" :src="require('./../assets/logo.png')" alt="logo" /> -->
+        <img class="logo" :src="image" alt="logo" />
       </div>
 
       <div class="input-value">
@@ -48,7 +49,7 @@
         />
       </div>
       <q-item-section>
-        <div class="flex justify-center text-primary cursor-pointer ">
+        <div class="flex justify-center text-primary cursor-pointer">
           <a class="q-mr-sm" to="/register">Forgot Username</a>
           <div>|</div>
           <a class="q-ml-sm" to="/register">Forgot Password</a>
@@ -60,13 +61,15 @@
 
 <script>
 import { ref } from "vue";
+import image from "./../assets/logo.png";
 
-const link = [
-  {
-    label: "",
-  },
-];
 export default {
+  data: function () {
+    return {
+      image: image,
+    };
+  },
+
   name: "LoginForm",
   setup() {
     const submitResult = ref([]);
