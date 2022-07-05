@@ -221,6 +221,18 @@
       </q-scroll-area>
     </q-drawer>
 
+    <q-footer elevated class="text-white">
+      <q-toolbar :class="mode ? '' : 'bg-grey-1'">
+        <q-toolbar-title>
+          <div class="flex justify-center q-px-lg">
+            <div :class="mode ? '' : 'text-black'">Title</div>
+            <div :class="mode ? '' : 'text-black'">Title</div>
+            <div :class="mode ? '' : 'text-black'">Title</div>
+          </div>
+        </q-toolbar-title>
+      </q-toolbar>
+    </q-footer>
+
     <q-page-container>
       <router-view />
     </q-page-container>
