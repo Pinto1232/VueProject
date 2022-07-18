@@ -225,9 +225,9 @@
       <q-toolbar :class="mode ? '' : 'bg-grey-1'">
         <q-toolbar-title>
           <div class="flex justify-center q-px-lg">
-            <div :class="mode ? '' : 'text-black'">Title</div>
-            <div :class="mode ? '' : 'text-black'">Title</div>
-            <div :class="mode ? '' : 'text-black'">Title</div>
+            <div :class="mode ? '' : 'text-black'"></div>
+            <div :class="mode ? '' : 'text-black'"></div>
+            <div :class="mode ? '' : 'text-black'"></div>
           </div>
         </q-toolbar-title>
       </q-toolbar>

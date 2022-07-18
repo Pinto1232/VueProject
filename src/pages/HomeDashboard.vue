@@ -3,7 +3,7 @@
     <q-item-section
       elevated
       :class="mode ? 'bg-primary' : ''"
-      class="flex q-py-lg q-px-lg"
+      class="flex justify-content align-items q-py-lg q-px-lg"
     >
       <q-item-title>
         <carousel-slider-home />
@@ -11,7 +11,7 @@
     </q-item-section>
 
     <q-item-section>
-      <q-item-title>
+      <q-item-title :class="model ? '' : 'bg-grey-2'">
         <ChartsHome />
       </q-item-title>
     </q-item-section>
