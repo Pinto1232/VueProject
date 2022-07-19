@@ -1,34 +1,60 @@
 <template lang="">
-    <div  
-      class="
-       bg-white
-       container
-    ">
-    <form>
-          <input 
-                v-model="name"
-                placeholder="name"  
-            />
-            <input
-                v-model="surname"
-                placeholder="surname"
-            />
+  <q-section >
+    <div :class="mode ? 'bg-primary' : 'bg-grey-1'">
+       <div class="mx-10" >
+        <form>
             <input 
-                v-model="age"  
-                placeholder="age"
-            />
-            <input 
-                v-model="email"  
-                placeholder="email"
-            />
-               <input 
-                v-model="address"  
-                placeholder="address"
-            />
-            <button @click="getDataHanling">Submit</button>
-    </form>
+                    v-model="name"
+                    placeholder="name"  
+                />
+                <input
+                    v-model="surname"
+                    placeholder="surname"
+                />
+                <input 
+                    v-model="age"  
+                    placeholder="age"
+                />
+                <input 
+                    v-model="email"  
+                    placeholder="email"
+                />
+                <input 
+                    v-model="address"  
+                    placeholder="address"
+                />
+                <button @click="getDataHanling">Submit</button>
+         </form>
+       </div>
 
+       <div class="py-10" >
+        <form>
+            <input 
+                    v-model="name"
+                    placeholder="name"  
+                />
+                <input
+                    v-model="surname"
+                    placeholder="surname"
+                />
+                <input 
+                    v-model="age"  
+                    placeholder="age"
+                />
+                <input 
+                    v-model="email"  
+                    placeholder="email"
+                />
+                <input 
+                    v-model="address"  
+                    placeholder="address"
+                />
+                <button class="mx-auto" @click="getDataHanling">Submit</button>
+         </form>
+
+       </div>
     </div>
+  </q-section>
 </template>
 <script>
 export default {
@@ -78,33 +104,41 @@ export default {
             localStorage.address = newAddress;
         }
     } */
+    computed: {
+        mode: function () {
+        return this.$q.dark.isActive;
+        },
+  },
     
 }
 </script>
 <style scoped>
     .container{
-        padding: 2rem;
-        display: flex;
         align-items: center;
-        flex-direction: column;
-        min-width: 100%;
     }
     input{
-        display: flex;
-        margin: 1em;
-        width: 50em;
-        min-width: 100%;
+        max-width: 33%;
+        min-width: 98%;
         text-transform: capitalize;
-        padding: 1em;;
-        gap: 4;
+        padding: 1em;
+        margin: 1em;
     }
     button{
         background: #000;
         color: #fff;
         border: none;
-        width: 100%;
+        min-width: 97.5%;
         padding: 1em;
         font-size: 18px;
         cursor: pointer;
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+        input{
+            margin: 1em;
+        }
     }
 </style>
