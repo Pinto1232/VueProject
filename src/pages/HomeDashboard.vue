@@ -11,7 +11,7 @@
     </q-item-section>
 
     <q-item-section>
-      <q-item-title :class="model ? '' : 'bg-grey-2'">
+      <q-item-title :class="model ? '' : ''">
         <ChartsHome />
       </q-item-title>
     </q-item-section>
@@ -23,7 +23,6 @@
 </template>
 
 <script>
-import CarouselSliderHome from "../components/CarouselSliderHome.vue";
 import ChartsHome from "src/components/ChartsHome.vue";
 import TableHome from "../components/TableHome.vue";
 
@@ -35,7 +34,6 @@ export default {
   },
 
   components: {
-    CarouselSliderHome,
     ChartsHome,
     TableHome,
   },
