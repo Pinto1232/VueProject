@@ -1,33 +1,26 @@
 <template>
-  <q-item :class="mode ? '' : 'bg-grey-2'" class="text-black">
-    <div class="flex table-row-div">
-      <div class="bg-red" :class="mode ? 'text-white' : ''">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+  <q-item :class="mode ? '' : 'bg-grey-2'" class="text-black main-content">
+    <div class="table-row-div">
+      <div class="bg-red forms-group" :class="mode ? 'text-white' : ''">
+        <forms-user />
       </div>
-      <div class="bg-green" :class="mode ? 'text-white' : ''">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      </div>
-      <div class="bg-blue" :class="mode ? 'text-white' : ''">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      </div>
-      <div class="bg-yellow" :class="mode ? 'text-white' : ''">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      </div>
-      <div class="bg-yellow" :class="mode ? 'text-white' : ''">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      </div>
+    </div>
 
-      <div class="bg-yellow" :class="mode ? 'text-white' : ''">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    <div class="table-row-div">
+      <div class="bg-red forms-group" :class="mode ? 'text-white' : ''">
+        <forms-user />
       </div>
     </div>
   </q-item>
 </template>
 
 <script>
+import Forms from "./Forms/FormsUser.vue";
 export default {
   name: "TableHome",
-
+  components: {
+    "forms-user": Forms,
+  },
   setup() {
     return {};
   },
@@ -40,13 +33,14 @@ export default {
 </script>
 
 <style scoped>
-.table-row-div div {
-  margin-top: 3em;
-  flex-grow: 1;
-  gap: 1em;
-  padding: 6%;
-  margin: 1em;
-  align-items: center;
-  justify-content: space-between;
+.main-content .table-row-div {
+  flex-direction: column;
+  min-width: 50%;
+}
+
+.main-content .forms-group {
+  min-width: 20em;
+  padding: 2em;
+  margin: 5px;
 }
 </style>

@@ -1,3 +1,10 @@
+<template>
+  <q-page class="flex justify-around home-bg">
+    <LoginFormVue />
+  </q-page>
+</template>
+
+
 <script>
 import { defineComponent } from "vue";
 import LoginFormVue from "src/components/LoginForm.vue";
@@ -9,12 +16,6 @@ export default defineComponent({
   },
 });
 </script>
-
-<template>
-  <q-page class="flex justify-around home-bg">
-    <LoginFormVue />
-  </q-page>
-</template>
 
 <style scoped>
 .home-bg {

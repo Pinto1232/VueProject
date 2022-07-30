@@ -6,7 +6,7 @@
       class="flex justify-content align-items q-py-lg q-px-lg"
     >
       <q-item-title>
-        <carousel-slider-home />
+        <carousel-slider />
       </q-item-title>
     </q-item-section>
 
@@ -25,17 +25,18 @@
 <script>
 import ChartsHome from "src/components/ChartsHome.vue";
 import TableHome from "../components/TableHome.vue";
+import CarouselSlider from "../components/Slider/CarouselSlider.vue";
 
 export default {
   name: "HomeDashboard",
-
-  setup() {
-    return {};
-  },
-
   components: {
     ChartsHome,
     TableHome,
+    "carousel-slider": CarouselSlider,
+  },
+
+  setup() {
+    return {};
   },
   computed: {
     mode: function () {
